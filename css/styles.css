@@ -1,3 +1,10 @@
+html{
+  scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
 body {
   font-family: 'Lato', arial, sans-serif;
   color: #444;
@@ -14,7 +21,10 @@ header {
 footer {
   background-color: #B09B9B;
 }
-ul.nav__list {
+.container {
+  overflow: hidden;
+}
+.nav__list {
     list-style-type: none;
     margin: 0;
     display: flex;
@@ -26,11 +36,21 @@ ul.nav__list {
 .container {
   display: flex;
 }
-.nav a {
+nav.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rsschool {
+  padding: 5px 30px;
+  border-radius: 50%;
+}
+.nav__item a {
   padding: 5px 30px;
   border-radius: 50%;
   color: black;
 }
+
 .nav a:hover {
     background-color: wheat;
     text-decoration: none;
@@ -39,4 +59,97 @@ ul.nav__list {
 .wrapper {
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
+}
+.nomination {
+    padding: 10px 0px;
+    color: white;
+    background-color: #000;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+p.nomination__name {
+    font-size: 20px;
+    padding: 0px 140px;
+}
+.nomination::after{
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  background-color: #BAE391;
+}
+.nomination.nomination__left {
+    justify-content: flex-start;
+}
+.nomination.nomination__right {
+     justify-content: flex-end;
+}
+.nomination.nomination__side::after{
+  left: 10%;
+}
+.nomination.nomination__right::after{
+  left: 90%;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.myself {
+  width: 100%;
+}
+.left__side {
+  width: 40%;
+  border: 2px solid black;
+}
+.right__side{
+  width: 60%;
+  border: 2px solid black;
+}
+li.scroll__element {
+    padding: 10px;
+}
+ul.scroll {
+    font-size: 20px;
+}
+.github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+p.about__text {
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px;
+}
+.project__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #B09B9B;
+    margin: 10px;
+    border-radius: 2%;
+}
+p.project__name {
+    font-size: 20px;
+}
+button.codewars {
+    width: 50px;
+    height: 50px;
+    background-color: #BAE391;
+    border-radius: 50%;
+    border: 2px solid #bae391;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 40px;
+    cursor: pointer ;
+}
+.code {
+  margin: 10px 0px;
 }
