@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Andrei Makouchyk</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#about">About me</a></li>
+        <li class="nav__item"><a href="#skills">Skills</a></li>
+        <li class="nav__item"><a href="#code">Code</a></li>
+        <li class="nav__item"><a href="#projects">Projects</a></li>
+        <li class="nav__item"><a href="#contacts">Contacts</a></li>
+        <a class="header__rsschool" href="#rs">
+        <img src="../../Desktop/rsschool-cv/images/img/rs__logo.png">
+      </a>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="left__side">
+      <img src="../../Desktop/rsschool-cv/images/img/myself.png">
+      <div class="contacts">
+        <div class="nomination">
+          <p>Contacts</p>
+        </div>
+        <ul class="scroll">
+          <li class="scroll__element">+375 29 129 6336</li>
+          <li class="scroll__element">makovchik1111@gmail.com</li>
+          <li class="scroll__element">@kladiknayden (telegram)</li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <div class="nomination">
+          <p>Contacts</p>
+        </div>
+        <ul class="scroll">
+          <li class="scroll__element">HTML5, CSS3</li>
+          <li class="scroll__element">JS</li>
+          <li class="scroll__element">C#</li>
+        </ul>
+      </div>
+    </div>
+    <div class="right__side">
+      <div class="about">
+        <div class="nomination">
+          <p>About me</p>
+        </div>
+        <p>
+          Hello! My name is Andrei!<br>
+          I am a student at the Maxim Tank Belarusian State Pedagogical University. Although my future qualification is “Teacher”, but at the institute I also attended classes on algorithmization in the C # language. Last year, I started working part-time at the Institute for Advanced Studies and Retraining of the Belarusian State Pedagogical University as a “Specialist”. And now for half a year I have been trying to learn JS on my own. Most of all I like to solve algorithmic problems on codewars.com :).
+          I really want to take the course and gain knowledge that will help me do what interests me and what I am ready to grow in.
+          At the moment, my skills in writing HTML code are quite weak, but I am ready to try and be considerate. I will leave an example of the JS code below.
+        </p>
+      </div>
+      <div class="code">
+        <div class="nomination">
+          <p>Code</p>
+        </div>
+        <pre>
+          function formatDuration (time) {
+  let normalTime=''
+  
+  let years = Math.trunc(time/(60*60*24*365))
+  time = time - years*60*60*24*365
+  
+  let days = Math.trunc(time/(60*60*24))
+  time = time - days*60*60*24
+  
+  let hours = Math.trunc(time/(60*60))
+  time = time - hours*60*60
+  
+  let minutes = Math.trunc(time/(60))
+  
+  let seconds = time - minutes*60
+  
+  if (years!=0)
+    if(years!=1)
+      normalTime = normalTime+` ${years} years,`
+      else
+        normalTime = normalTime+` ${years} year,`
+        
+  if (days!=0)
+    if(days!=1)
+      normalTime = normalTime+` ${days} days,`
+      else
+        normalTime = normalTime+` ${days} day,`
+        
+  if (hours!=0)
+    if(hours!=1)
+      normalTime = normalTime+` ${hours} hours,`
+      else
+        normalTime = normalTime+` ${hours} hour,`
+        
+  if (minutes!=0)
+    if(minutes!=1)
+      normalTime = normalTime+` ${minutes} minutes,`
+      else
+        normalTime = normalTime+` ${minutes} minute,`
+        
+  if (seconds!=0)
+    if(seconds!=1)
+      normalTime = normalTime+` ${seconds} seconds,`
+      else
+        normalTime = normalTime+` ${seconds} second,`
+        
+  let array = normalTime.split('')
+  let count = 0
+  let i = array.length
+  
+  while(count <2){
+    if(array[i]==' '){
+      count++
+    }
+    i--
+    if (i<0)
+      count++
+  }
+  
+  if (i>0)
+    array[i]=' and'
+  
+  array.pop()
+  array.shift()
+  
+  if (array.join('')=='')
+    return 'now'
+  return array.join('')
+}
+        </pre>
+      </div>
+      <div class="projects">
+        <div class="nomination">
+          <p>Projects</p>
+        </div>
+        <div class="wrapper">
+          <div class="project__element">
+            <img src="../../Desktop/rsschool-cv/images/img/board__game.png">
+            <p class="project__name">board game</p>
+          </div>
+          <div class="project__element">
+            <img src="../../Desktop/rsschool-cv/images/img/memory__game.png">
+            <p class="project__name">tic-tac</p>
+          </div>
+          <div class="project__element">
+            <img src="../../Desktop/rsschool-cv/images/img/tic-tac.png">
+            <p class="project__name">memory game</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrapper">
+      <div class="github">
+        <img src="../../Desktop/rsschool-cv/images/svg/gh__logo.svg">
+        <a class="github__page" href="">My GitHub</a>
+      </div>
+      <p>2022-2023</p>
+      <a class="footer__rsschool" href="#rs">
+          <img src="../../Desktop/rsschool-cv/images/img/rs__logo.png">
+      </a>
+  </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
